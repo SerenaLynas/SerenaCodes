@@ -12,7 +12,13 @@ h1 {
 
 h2 {
     margin: 0;
-    line-height: 0.95
+    line-height: 0.95;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+h3, p {
+    margin: 0.5em;
 }
 
 ul {
@@ -26,20 +32,52 @@ main {
     align-items: center;
 }
 
-@keyframes introAnim {
-    0% {
-        transform: scale(0) translate(0, 45vw)
-    }
-
-    50% {
-        transform: scale(1.1) translate(0, 45vw)
-    }
-
-    60% {
-        transform: scale(1) translate(0, 45vw)
+@keyframes titleSlideIn {
+    0%, 80% {
+        transform: translate(0, 45vh);
     }
 
     100% {
-        transform: scale(1) translate(0, 0)
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+
+    90% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -15%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes flyIn {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
     }
 }
