@@ -34029,7 +34029,7 @@ const my_info_1 = __webpack_require__(/*! ./my-info */ "./src/my-info.tsx");
 exports.App = () => {
     return react_1.default.createElement("main", null,
         react_1.default.createElement(sequence_1.Sequence, null,
-            react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 0 /*3_300*/ },
+            react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 3300 },
                 react_1.default.createElement("div", { style: {
                         animation: "3.3s ease-out 0s titleSlideIn"
                     } },
@@ -34077,7 +34077,9 @@ exports.Card = (props) => {
                 margin: 10,
                 borderRadius: 5
             } }) : react_1.default.createElement(react_1.default.Fragment, null),
-        react_1.default.createElement("div", null, props.children),
+        react_1.default.createElement("div", { style: {
+                padding: 5
+            } }, props.children),
         react_1.default.createElement("div", { style: {
                 backgroundImage: "url(./dots.svg)",
                 position: "absolute",
@@ -34145,15 +34147,20 @@ exports.MyInfo = () => {
                 maxWidth: 800
             } },
             react_1.default.createElement("h2", null, "Who am I?"),
-            react_1.default.createElement("p", null, "I'm an undergrad at Case Western Reserve University, and I'm studying physics, mathematics, and computer science. I'm not quite too sure yet on which degree I'll end up going for, but it'll probably be one of those!"),
+            react_1.default.createElement("p", null, "I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring in Physics and Mathematics, BS, and Computer Science, BA. I've been coding for more than 5 years in a variety of languages with a bunch of projects!"),
+            react_1.default.createElement("br", null),
             react_1.default.createElement("h2", null, "My Projects and Experience"),
             react_1.default.createElement(staggered_1.Staggered, null,
                 react_1.default.createElement(card_1.Card, { imgSrc: "wolfbyte-logo.jpg" },
                     react_1.default.createElement("h3", null, "Robots!"),
-                    react_1.default.createElement("p", null, "Throughout my four years of high school, I used Java to program robots for my school's FRC team! For three of the four years, I was the \"Coding Captain\", meaning that I got valuable experience leading our team's coders to accomplish a goal with a set deadline. I also used control theory in programming autonomous robot code.")),
-                react_1.default.createElement(card_1.Card, null,
+                    react_1.default.createElement("p", null, "Throughout my four years of high school, I used Java to program robots for my school's FRC team! For three of the four years, I was the \"Coding Captain\", meaning that I got valuable experience leading our team's coders to accomplish a goal with a set deadline. I also used control theory in programming autonomous robot code, and I used a PID controller to rotate the robot to a desired heading using differential drive.")),
+                react_1.default.createElement(card_1.Card, { imgSrc: "compuut-logo.png" },
                     react_1.default.createElement("h3", null, "Compuut"),
-                    react_1.default.createElement("p", null, "Compuut is a higher-level learning platform that I started developing towards the end of high school, and its development is still ongoing\u2014it's a work in progress! For this app, I programmed both the front- and back-end in TypeScript, using Webpack and React for the front-end and Firebase (mostly Firestore and Functions) for the backend. Using these technologies, I was able to make Compuut a realtime learning platform similar to Kahoot."))),
+                    react_1.default.createElement("p", null, "Compuut is a higher-level learning platform that I started developing towards the end of high school, and its development is still ongoing\u2014it's a work in progress! For this app, I programmed both the front- and back-end in TypeScript, using Webpack and React for the front-end and Firebase (mostly Firestore and Functions) for the backend. Using these technologies, I was able to make Compuut a realtime learning platform similar to Kahoot.")),
+                react_1.default.createElement(card_1.Card, { imgSrc: "crt-logo.png" },
+                    react_1.default.createElement("h3", null, "Rockets"),
+                    react_1.default.createElement("p", null, "At Case Western Reserve University, I've been working on flight computers for our rockets in embedded Rust and C++. I'm still a newbie on the team, but I've been learning a lot and am about to earn my L1 certification."))),
+            react_1.default.createElement("br", null),
             react_1.default.createElement("h2", null, "My Languages"),
             react_1.default.createElement(staggered_1.Staggered, null,
                 react_1.default.createElement(card_1.Card, { imgSrc: "ts-logo-256.png" },
@@ -34162,9 +34169,19 @@ exports.MyInfo = () => {
                 react_1.default.createElement(card_1.Card, { imgSrc: "java-logo.png" },
                     react_1.default.createElement("h3", null, "Java"),
                     react_1.default.createElement("p", null, "Although it's not my favorite language, I also have lots of experience with Java, from writing plugins for Minecraft servers to programming robots.")),
+                react_1.default.createElement(card_1.Card, { imgSrc: "rust-logo.png" },
+                    react_1.default.createElement("h3", null, "Rust (embedded)"),
+                    react_1.default.createElement("p", null, "On Case Rocket Team, I've used Rust as an embedded language, and I'm comfortable in saying that I'm proficient in many aspects of the language. Using the Cortex M7 processor and the iMXRT1062 chip HALs, I've written applications on bare metal in Rust.")),
                 react_1.default.createElement(card_1.Card, { imgSrc: "lua-logo.png" },
-                    react_1.default.createElement("h3", null, "Lua, Python, Rust, and other languages"),
-                    react_1.default.createElement("p", null, "I also have some experience with other languages, including Lua, Python, and Rust, but I'm not as fast at programming with these as I am with JS/TS and Java. I'm a fast learner though, so if you need me to pick up a language for your project I can!")))));
+                    react_1.default.createElement("h3", null, "Lua, Python, and other languages"),
+                    react_1.default.createElement("p", null, "I also have some experience with other languages, including Lua, Python, and C/C++ from working on other miscellaneous projects. I'm a fast learner, so if you need me to pick up a language for your project I can!"))),
+            react_1.default.createElement("br", null),
+            react_1.default.createElement("h2", null, "Connect with Me"),
+            react_1.default.createElement("p", null,
+                react_1.default.createElement("a", { href: "https://github.com/SploxFox" }, "Check out my GitHub!")),
+            react_1.default.createElement("div", { style: {
+                    height: "30vh"
+                } })));
 };
 
 

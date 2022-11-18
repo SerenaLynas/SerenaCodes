@@ -22,7 +22,9 @@ export const Card = (props: PropsWithChildren<Props>) => {
             margin: 10,
             borderRadius: 5
         }}/> : <></> }
-        <div>
+        <div style={{
+            padding: 5
+        }}>
             { props.children }
         </div>
         <div style={{

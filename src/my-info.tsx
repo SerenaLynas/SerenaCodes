@@ -14,10 +14,11 @@ export const MyInfo = () => {
         }}>
             <h2>Who am I?</h2>
             <p>
-                I'm an undergrad at Case Western Reserve University, and I'm studying
-                physics, mathematics, and computer science. I'm not quite too sure yet
-                on which degree I'll end up going for, but it'll probably be one of those!
+                I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring
+                in Physics and Mathematics, BS, and Computer Science, BA. I've been coding for
+                more than 5 years in a variety of languages with a bunch of projects!
             </p>
+            <br/>
             <h2>My Projects and Experience</h2>
             <Staggered>
                 <Card imgSrc="wolfbyte-logo.jpg">
@@ -27,10 +28,11 @@ export const MyInfo = () => {
                         for my school's FRC team! For three of the four years, I was the "Coding Captain",
                         meaning that I got valuable experience leading our team's coders to accomplish
                         a goal with a set deadline. I also used control theory in programming autonomous
-                        robot code.
+                        robot code, and I used a PID controller to rotate the robot to a desired heading
+                        using differential drive.
                     </p>
                 </Card>
-                <Card>
+                <Card imgSrc="compuut-logo.png">
                     <h3>Compuut</h3>
                     <p>
                         Compuut is a higher-level learning platform that I started developing towards the
@@ -41,7 +43,16 @@ export const MyInfo = () => {
                         to Kahoot.
                     </p>
                 </Card>
+                <Card imgSrc="crt-logo.png">
+                    <h3>Rockets</h3>
+                    <p>
+                        At Case Western Reserve University, I've been working on flight computers for our
+                        rockets in embedded Rust and C++. I'm still a newbie on the team, but I've been learning
+                        a lot and am about to earn my L1 certification.
+                    </p>
+                </Card>
             </Staggered>
+            <br />
             <h2>My Languages</h2>
             <Staggered>
                 <Card imgSrc="ts-logo-256.png">
@@ -59,17 +70,37 @@ export const MyInfo = () => {
                         robots.
                     </p>
                 </Card>
+                <Card imgSrc="rust-logo.png">
+                    <h3>Rust (embedded)</h3>
+                    <p>
+                        On Case Rocket Team, I've used Rust as an embedded language, and I'm
+                        comfortable in saying that I'm proficient in many aspects of the language.
+                        Using the Cortex M7 processor and the iMXRT1062 chip HALs, I've written
+                        applications on bare metal in Rust.
+                    </p>
+                </Card>
                 <Card imgSrc="lua-logo.png">
-                    <h3>Lua, Python, Rust, and other languages</h3>
+                    <h3>Lua, Python, and other languages</h3>
                     <p>
                         I also have some experience with other languages, including Lua, Python,
-                        and Rust, but I'm not as fast at programming with these as I am with JS/TS
-                        and Java. I'm a fast learner though, so if you need me to pick up a language
+                        and C/C++ from working on other miscellaneous projects.
+                        I'm a fast learner, so if you need me to pick up a language
                         for your project I can!
                     </p>
                 </Card>
             </Staggered>
-            
+            <br />
+            <h2>
+                Connect with Me
+            </h2>
+            <p>
+                <a href="https://github.com/SploxFox">Check out my GitHub!</a>
+            </p>
+            <div style={{
+                height: "30vh"
+            }}>
+                {/* Spacing!! */}
+            </div>
         </div>
     </div>
 }
