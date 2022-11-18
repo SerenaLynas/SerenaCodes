@@ -1,0 +1,1 @@
+{"version":3,"file":"sequence.d.ts","sourceRoot":"","sources":["../../src/sequence/sequence.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAiB,YAAY,EAA+B,MAAM,OAAO,CAAC;AAGxF,OAAO,EAAE,iBAAiB,EAAE,MAAM,uBAAuB,CAAC;AAE1D,UAAU,KAAK;IACX,QAAQ,EAAE,YAAY,CAAC,iBAAiB,CAAC,EAAE,GAAG,YAAY,CAAC,iBAAiB,CAAC,CAAC;CACjF;AAED,eAAO,MAAM,QAAQ,UAAW,KAAK,gBAyBpC,CAAA"}
