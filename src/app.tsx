@@ -11,14 +11,14 @@ import { MyInfo } from "./my-info"
 export const App = () => {
     return <main>
         <Sequence>
-            <SequenceItem duration={3_300}>
+            <SequenceItem duration={3_300} key={0}>
                 <div style={{
                     animation: "3.3s ease-out 0s titleSlideIn"
                 }}>
                     <PopText>Hi!<Wait delay={500}/> I'm Serena!</PopText>
                 </div>
             </SequenceItem>
-            <SequenceItem duration={0}>
+            <SequenceItem duration={0} key={1}>
                 <SequenceHidden>
                     <MyInfo />
                 </SequenceHidden>

@@ -34029,7 +34029,7 @@ const my_info_1 = __webpack_require__(/*! ./my-info */ "./src/my-info.tsx");
 exports.App = () => {
     return react_1.default.createElement("main", null,
         react_1.default.createElement(sequence_1.Sequence, null,
-            react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 3300 },
+            react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 3300, key: 0 },
                 react_1.default.createElement("div", { style: {
                         animation: "3.3s ease-out 0s titleSlideIn"
                     } },
@@ -34037,7 +34037,7 @@ exports.App = () => {
                         "Hi!",
                         react_1.default.createElement(wait_1.Wait, { delay: 500 }),
                         " I'm Serena!"))),
-            react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 0 },
+            react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 0, key: 1 },
                 react_1.default.createElement(sequence_hidden_1.SequenceHidden, null,
                     react_1.default.createElement(my_info_1.MyInfo, null)))));
 };
