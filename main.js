@@ -34452,7 +34452,7 @@ exports.Staggered = (props) => {
             padding: 10,
             ...props.style
         } }, react_2.Children.map(props.children, (child, i) => react_1.default.createElement("div", { key: i, style: {
-            [i % 2 == 0 ? "margin-right" : "margin-left"]: "20%",
+            [i % 2 == 0 ? "marginRight" : "marginLeft"]: "20%",
             width: "80%"
         } }, child)));
 };
