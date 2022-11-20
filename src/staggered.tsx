@@ -14,7 +14,7 @@ export const Staggered = (props: PropsWithChildren<Props>) => {
         ...props.style
     }}>
         { Children.map(props.children, (child, i) => <div key={i} style={{
-            [i % 2 == 0 ? "margin-right" : "margin-left"]: "20%",
+            [i % 2 == 0 ? "marginRight" : "marginLeft"]: "20%",
             width: "80%"
         }}>
             { child }
