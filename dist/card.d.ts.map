@@ -1,1 +1,1 @@
-{"version":3,"file":"card.d.ts","sourceRoot":"","sources":["../src/card.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAE,iBAAiB,EAAE,MAAM,OAAO,CAAA;AAEhD,UAAU,KAAK;IACX,MAAM,CAAC,EAAE,MAAM,CAAA;CAElB;AAED,eAAO,MAAM,IAAI,UAAW,kBAAkB,KAAK,CAAC,gBAmCnD,CAAA"}
+{"version":3,"file":"card.d.ts","sourceRoot":"","sources":["../src/card.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAE,iBAAiB,EAAE,MAAM,OAAO,CAAA;AAEhD,UAAU,KAAK;IACX,MAAM,CAAC,EAAE,MAAM,CAAA;CAElB;AAED,eAAO,MAAM,IAAI,UAAW,kBAAkB,KAAK,CAAC,gBAiCnD,CAAA"}

@@ -15,11 +15,43 @@ export const MyInfo = () => {
             <h2>Who am I?</h2>
             <p>
                 I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring
-                in Physics and Mathematics, BS, and Computer Science, BA. I've been coding for
-                more than 5 years in a variety of languages with a bunch of projects!
+                in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math,
+                physics and computer science, so I decided to major in all three! I've been coding for
+                more than 5 years in a variety of languages with a variety of projects.
+            </p>
+            <br />
+            <h2>
+                Connect
+            </h2>
+            <p>
+                Email: <a href="mailto://serena@serena.codes">serena@serena.codes</a>
+                <br />
+                GitHub: SploxFox &mdash; <a href="https://github.com/SploxFox">Check it out! (https://github.com/SploxFox)</a>
             </p>
             <br/>
-            <h2>My Projects and Experience</h2>
+            <h2>Timeline</h2>
+                <h3>2022-Present</h3>
+                <ul>
+                    <li>
+                        Undergrad at Case Western Reserve University, studying Mathematics, Physics, and
+                        Computer Science.
+                    </li>
+                    <li>
+                        Rocket team
+                    </li>
+                </ul>
+                <h3>2018-2022</h3>
+                <ul>
+                    <li>
+                        Student at St. Ignatius College Prep in Chicago, IL.
+                    </li>
+                    <li>
+                        <em>2019-2022</em>: Coding Captain on our school's robotics team.
+                    </li>
+                </ul>
+                <br />
+            <br/>
+            <h2>Projects & Experience</h2>
             <Staggered>
                 <Card imgSrc="wolfbyte-logo.jpg">
                     <h3>Robots!</h3>
@@ -89,13 +121,6 @@ export const MyInfo = () => {
                     </p>
                 </Card>
             </Staggered>
-            <br />
-            <h2>
-                Connect with Me
-            </h2>
-            <p>
-                <a href="https://github.com/SploxFox">Check out my GitHub!</a>
-            </p>
             <div style={{
                 height: "30vh"
             }}>

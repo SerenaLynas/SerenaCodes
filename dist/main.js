@@ -34036,7 +34036,7 @@ exports.App = () => {
                     react_1.default.createElement(pop_text_1.PopText, null,
                         "Hi!",
                         react_1.default.createElement(wait_1.Wait, { delay: 500 }),
-                        " I'm Serena!"))),
+                        " I'm Serena Lynas!"))),
             react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 0, key: 1 },
                 react_1.default.createElement(sequence_hidden_1.SequenceHidden, null,
                     react_1.default.createElement(my_info_1.MyInfo, null)))));
@@ -34064,12 +34064,10 @@ exports.Card = (props) => {
     return react_1.default.createElement("div", { style: {
             display: "flex",
             borderRadius: 5,
-            //height: "10vh",
-            //boxShadow: "0 0 10px -1px grey",
             position: "relative",
-            backgroundColor: "rgb(252 242 242)",
+            //backgroundColor: "rgb(252 242 242)",
             textAlign: "justify",
-            padding: 10
+            padding: 5
         } },
         props.imgSrc ? react_1.default.createElement("img", { src: props.imgSrc, style: {
                 height: "3em",
@@ -34078,18 +34076,8 @@ exports.Card = (props) => {
                 borderRadius: 5
             } }) : react_1.default.createElement(react_1.default.Fragment, null),
         react_1.default.createElement("div", { style: {
-                padding: 5
-            } }, props.children),
-        react_1.default.createElement("div", { style: {
-                backgroundImage: "url(./dots.svg)",
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                top: 5,
-                left: 5,
-                borderRadius: 5,
-                zIndex: -1
-            } }));
+                padding: 0
+            } }, props.children));
 };
 
 
@@ -34147,9 +34135,30 @@ exports.MyInfo = () => {
                 maxWidth: 800
             } },
             react_1.default.createElement("h2", null, "Who am I?"),
-            react_1.default.createElement("p", null, "I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring in Physics and Mathematics, BS, and Computer Science, BA. I've been coding for more than 5 years in a variety of languages with a bunch of projects!"),
+            react_1.default.createElement("p", null, "I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math, physics and computer science, so I decided to major in all three! I've been coding for more than 5 years in a variety of languages with a variety of projects."),
             react_1.default.createElement("br", null),
-            react_1.default.createElement("h2", null, "My Projects and Experience"),
+            react_1.default.createElement("h2", null, "Connect"),
+            react_1.default.createElement("p", null,
+                "Email: ",
+                react_1.default.createElement("a", { href: "mailto://serena@serena.codes" }, "serena@serena.codes"),
+                react_1.default.createElement("br", null),
+                "GitHub: SploxFox \u2014 ",
+                react_1.default.createElement("a", { href: "https://github.com/SploxFox" }, "Check it out! (https://github.com/SploxFox)")),
+            react_1.default.createElement("br", null),
+            react_1.default.createElement("h2", null, "Timeline"),
+            react_1.default.createElement("h3", null, "2022-Present"),
+            react_1.default.createElement("ul", null,
+                react_1.default.createElement("li", null, "Undergrad at Case Western Reserve University, studying Mathematics, Physics, and Computer Science."),
+                react_1.default.createElement("li", null, "Rocket team")),
+            react_1.default.createElement("h3", null, "2018-2022"),
+            react_1.default.createElement("ul", null,
+                react_1.default.createElement("li", null, "Student at St. Ignatius College Prep in Chicago, IL."),
+                react_1.default.createElement("li", null,
+                    react_1.default.createElement("em", null, "2019-2022"),
+                    ": Coding Captain on our school's robotics team.")),
+            react_1.default.createElement("br", null),
+            react_1.default.createElement("br", null),
+            react_1.default.createElement("h2", null, "Projects & Experience"),
             react_1.default.createElement(staggered_1.Staggered, null,
                 react_1.default.createElement(card_1.Card, { imgSrc: "wolfbyte-logo.jpg" },
                     react_1.default.createElement("h3", null, "Robots!"),
@@ -34175,10 +34184,6 @@ exports.MyInfo = () => {
                 react_1.default.createElement(card_1.Card, { imgSrc: "lua-logo.png" },
                     react_1.default.createElement("h3", null, "Lua, Python, and other languages"),
                     react_1.default.createElement("p", null, "I also have some experience with other languages, including Lua, Python, and C/C++ from working on other miscellaneous projects. I'm a fast learner, so if you need me to pick up a language for your project I can!"))),
-            react_1.default.createElement("br", null),
-            react_1.default.createElement("h2", null, "Connect with Me"),
-            react_1.default.createElement("p", null,
-                react_1.default.createElement("a", { href: "https://github.com/SploxFox" }, "Check out my GitHub!")),
             react_1.default.createElement("div", { style: {
                     height: "30vh"
                 } })));
@@ -34211,7 +34216,7 @@ exports.PopText = (props) => {
         .flatMap(el => typeof el == "string" ? el.split('') : el);
     return react_1.default.createElement("div", null,
         react_1.default.createElement(sequence_1.Sequence, null, children.map((el, i) => typeof el == "string"
-            ? react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 100, key: i },
+            ? react_1.default.createElement(sequence_item_1.SequenceItem, { duration: 80, key: i },
                 react_1.default.createElement(PopTextChar, { char: el }))
             : react_1.default.createElement(sequence_item_1.SequenceItem, { duration: el.props.delay }))));
 };

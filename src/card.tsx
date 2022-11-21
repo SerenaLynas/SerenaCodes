@@ -9,12 +9,10 @@ export const Card = (props: PropsWithChildren<Props>) => {
     return <div style={{
         display: "flex",
         borderRadius: 5,
-        //height: "10vh",
-        //boxShadow: "0 0 10px -1px grey",
         position: "relative",
-        backgroundColor: "rgb(252 242 242)",
+        //backgroundColor: "rgb(252 242 242)",
         textAlign: "justify",
-        padding: 10
+        padding: 5
     }}>
         { props.imgSrc ? <img src={props.imgSrc} style={{
             height: "3em",
@@ -23,11 +21,11 @@ export const Card = (props: PropsWithChildren<Props>) => {
             borderRadius: 5
         }}/> : <></> }
         <div style={{
-            padding: 5
+            padding: 0
         }}>
             { props.children }
         </div>
-        <div style={{
+        {/*<div style={{
             backgroundImage: "url(./dots.svg)",
             position: "absolute",
             width: "100%",
@@ -36,8 +34,8 @@ export const Card = (props: PropsWithChildren<Props>) => {
             left: 5,
             borderRadius: 5,
             zIndex: -1
-        }}>
+        }}>*/}
 
-        </div>
+        {/*</div>*/}
     </div>
 }
