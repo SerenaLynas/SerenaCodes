@@ -1,1 +1,1 @@
-{"version":3,"file":"sequence-hidden.d.ts","sourceRoot":"","sources":["../../src/sequence/sequence-hidden.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAG1B,eAAO,MAAM,cAAc,UAAW,MAAM,iBAAiB,CAAC,EAAE,CAAC,uBAIhE,CAAA"}
+{"version":3,"file":"sequence-hidden.d.ts","sourceRoot":"","sources":["../../src/sequence/sequence-hidden.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAG1B,eAAO,MAAM,cAAc,UAAW,MAAM,iBAAiB,CAAC,EAAE,CAAC,gBAMhE,CAAA"}
