@@ -85,3 +85,9 @@ main {
         transform: translate(0, 0);
     }
 }
+
+@media print {
+    .noPrint {
+        display: none;
+    }
+}

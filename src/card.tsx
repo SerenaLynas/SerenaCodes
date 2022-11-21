@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from "react"
 
 interface Props {
     imgSrc?: string
-
+    imgEmoji?: string
 }
 
 export const Card = (props: PropsWithChildren<Props>) => {
@@ -15,11 +15,22 @@ export const Card = (props: PropsWithChildren<Props>) => {
         padding: 5
     }}>
         { props.imgSrc ? <img src={props.imgSrc} style={{
-            height: "3em",
+            height: "3rem",
             aspectRatio: "1 / 1",
             margin: 5,
             borderRadius: 5
-        }}/> : <></> }
+        }}/> : (
+            props.imgEmoji ? <div style={{
+                height: "3rem",
+                width: "3rem",
+                margin: 5,
+                borderRadius: 5,
+                fontSize: "2rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+            }}>{ props.imgEmoji }</div> : <></>
+        ) }
         <div style={{
             padding: 0
         }}>

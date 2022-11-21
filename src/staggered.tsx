@@ -9,7 +9,7 @@ export const Staggered = (props: PropsWithChildren<Props>) => {
     return <div style={{
         display: "flex",
         flexDirection: "column",
-        gap: 20,
+        gap: 2,
         padding: 10,
         ...props.style
     }}>

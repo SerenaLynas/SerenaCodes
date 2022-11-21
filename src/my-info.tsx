@@ -20,7 +20,9 @@ export const MyInfo = () => {
                 gridRow: "1"
             }}>
                 <h2>Who am I?</h2>
-                <p>
+                <p style={{
+                    textAlign: "justify"
+                }}>
                     I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring
                     in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math,
                     physics and computer science, so I decided to major in all three! I've been coding for
@@ -66,6 +68,7 @@ export const MyInfo = () => {
                 </h2>
                 <p>
                     Website: <a href="https://serena.codes">serena.codes</a>
+                    <br />
                     Email: <a href="mailto://serena@serena.codes">serena@serena.codes</a>
                     <br />
                     GitHub: SploxFox &mdash; <a href="https://github.com/SploxFox">Check it out! (https://github.com/SploxFox)</a>
@@ -154,10 +157,21 @@ export const MyInfo = () => {
                             </li>
                         </ul>
                     </Card>
+                    <Card imgEmoji="📝">
+                        <h3>Math & Physics</h3>
+                        <ul>
+                            <li>
+                                Math: Multivariable calculus. Will take Diff Eq Spring 2023
+                            </li>
+                            <li>
+                                Physics: Mechanics & E&M. No quantum (yet)
+                            </li>
+                        </ul>
+                    </Card>
                 </Staggered>
             </div>
         </div>
-        <div style={{
+        <div className="noPrint" style={{
             height: "30vh"
         }}>
             {/* Spacing!! */}
