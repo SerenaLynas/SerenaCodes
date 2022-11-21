@@ -34071,11 +34071,20 @@ exports.Card = (props) => {
             padding: 5
         } },
         props.imgSrc ? react_1.default.createElement("img", { src: props.imgSrc, style: {
-                height: "3em",
+                height: "3rem",
                 aspectRatio: "1 / 1",
                 margin: 5,
                 borderRadius: 5
-            } }) : react_1.default.createElement(react_1.default.Fragment, null),
+            } }) : (props.imgEmoji ? react_1.default.createElement("div", { style: {
+                height: "3rem",
+                width: "3rem",
+                margin: 5,
+                borderRadius: 5,
+                fontSize: "2rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+            } }, props.imgEmoji) : react_1.default.createElement(react_1.default.Fragment, null)),
         react_1.default.createElement("div", { style: {
                 padding: 0
             } }, props.children));
@@ -34142,7 +34151,9 @@ exports.MyInfo = () => {
                     gridRow: "1"
                 } },
                 react_1.default.createElement("h2", null, "Who am I?"),
-                react_1.default.createElement("p", null, "I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math, physics and computer science, so I decided to major in all three! I've been coding for more than 5 years in a variety of languages with a variety of projects."),
+                react_1.default.createElement("p", { style: {
+                        textAlign: "justify"
+                    } }, "I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math, physics and computer science, so I decided to major in all three! I've been coding for more than 5 years in a variety of languages with a variety of projects."),
                 react_1.default.createElement("br", null),
                 react_1.default.createElement("h2", null, "My Languages"),
                 react_1.default.createElement("br", null),
@@ -34168,6 +34179,7 @@ exports.MyInfo = () => {
                 react_1.default.createElement("p", null,
                     "Website: ",
                     react_1.default.createElement("a", { href: "https://serena.codes" }, "serena.codes"),
+                    react_1.default.createElement("br", null),
                     "Email: ",
                     react_1.default.createElement("a", { href: "mailto://serena@serena.codes" }, "serena@serena.codes"),
                     react_1.default.createElement("br", null),
@@ -34220,8 +34232,13 @@ exports.MyInfo = () => {
                         react_1.default.createElement("ul", null,
                             react_1.default.createElement("li", null, "Just joined this year"),
                             react_1.default.createElement("li", null, "Have built and launch one rocket so far, will launch more soon"),
-                            react_1.default.createElement("li", null, "Worked on embedded software, some in Rust and some in C++")))))),
-        react_1.default.createElement("div", { style: {
+                            react_1.default.createElement("li", null, "Worked on embedded software, some in Rust and some in C++"))),
+                    react_1.default.createElement(card_1.Card, { imgEmoji: "\uD83D\uDCDD" },
+                        react_1.default.createElement("h3", null, "Math & Physics"),
+                        react_1.default.createElement("ul", null,
+                            react_1.default.createElement("li", null, "Math: Multivariable calculus. Will take Diff Eq Spring 2023"),
+                            react_1.default.createElement("li", null, "Physics: Mechanics & E&M. No quantum (yet)")))))),
+        react_1.default.createElement("div", { className: "noPrint", style: {
                 height: "30vh"
             } }));
 };
@@ -34492,7 +34509,7 @@ exports.Staggered = (props) => {
     return react_1.default.createElement("div", { style: {
             display: "flex",
             flexDirection: "column",
-            gap: 20,
+            gap: 2,
             padding: 10,
             ...props.style
         } }, react_2.Children.map(props.children, (child, i) => react_1.default.createElement("div", { key: i, style: {
