@@ -17,7 +17,7 @@ export const Card = (props: PropsWithChildren<Props>) => {
         { props.imgSrc ? <img src={props.imgSrc} style={{
             height: "3em",
             aspectRatio: "1 / 1",
-            margin: 10,
+            margin: 5,
             borderRadius: 5
         }}/> : <></> }
         <div style={{

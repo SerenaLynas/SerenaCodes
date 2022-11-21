@@ -4,32 +4,74 @@ import { Staggered } from "./staggered"
 
 export const MyInfo = () => {
     return <div style={{
-        overflow: "hidden"
+        overflow: "hidden",
+        maxWidth: 800,
+        animation: "1s flyIn ease-out",
     }}>
         <div style={{
-            display: "flex",
-            flexDirection: "column",
-            animation: "1s flyIn ease-out",
-            maxWidth: 800
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            //gridTemplateRows: "repeat(3, 1fr)",
+            gap: 10,
+            
         }}>
-            <h2>Who am I?</h2>
-            <p>
-                I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring
-                in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math,
-                physics and computer science, so I decided to major in all three! I've been coding for
-                more than 5 years in a variety of languages with a variety of projects.
-            </p>
-            <br />
-            <h2>
-                Connect
-            </h2>
-            <p>
-                Email: <a href="mailto://serena@serena.codes">serena@serena.codes</a>
+            <div style={{
+                gridColumn: "1",
+                gridRow: "1"
+            }}>
+                <h2>Who am I?</h2>
+                <p>
+                    I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring
+                    in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math,
+                    physics and computer science, so I decided to major in all three! I've been coding for
+                    more than 5 years in a variety of languages with a variety of projects.
+                </p>
                 <br />
-                GitHub: SploxFox &mdash; <a href="https://github.com/SploxFox">Check it out! (https://github.com/SploxFox)</a>
-            </p>
-            <br/>
-            <h2>Timeline</h2>
+                <h2>My Languages</h2>
+                <br />
+                <ul>
+                    <li>
+                        5/5 🤩: TypeScript/JavaScript (Browser & NodeJS)
+                    </li>
+                    <li>
+                        5/5 🤩: Java
+                    </li>
+                    <li>
+                        4/5 🥰: Rust 
+                    </li>
+                    <li>
+                        4/5 🥰: Lua
+                    </li>
+                    <li>
+                        3/5 🙂: Python
+                    </li>
+                    <li>
+                        3/5 🙂: C/C++
+                    </li>
+                </ul>
+            </div>
+            <div style={{
+                gridColumn: "2",
+                gridRow: "1 / 3",
+                gridAutoColumns: "auto",
+                background: "rgb(252 242 242)",
+                padding: "25px",
+                margin: 5,
+                borderRadius: 5,
+                position: "relative",
+                alignSelf: "self-start"
+            }}>
+                <h2>
+                    Connect
+                </h2>
+                <p>
+                    Website: <a href="https://serena.codes">serena.codes</a>
+                    Email: <a href="mailto://serena@serena.codes">serena@serena.codes</a>
+                    <br />
+                    GitHub: SploxFox &mdash; <a href="https://github.com/SploxFox">Check it out! (https://github.com/SploxFox)</a>
+                </p>
+                <br/>
+                <h2>Timeline</h2>
                 <h3>2022-Present</h3>
                 <ul>
                     <li>
@@ -49,68 +91,76 @@ export const MyInfo = () => {
                         <em>2019-2022</em>: Coding Captain on our school's robotics team.
                     </li>
                 </ul>
-                <br />
-            <br/>
-            <h2>Projects & Experience</h2>
-            <Staggered>
-                <Card imgSrc="wolfbyte-logo.jpg">
-                    <h3>Robots!</h3>
-                    <p>
-                        Throughout my four years of high school, I used Java to program robots
-                        for my school's FRC team! For three of the four years, I was the "Coding Captain",
-                        meaning that I got valuable experience leading our team's coders to accomplish
-                        a goal with a set deadline. I also used control theory in programming autonomous
-                        robot code, and I used a PID controller to rotate the robot to a desired heading
-                        using differential drive.
-                    </p>
-                </Card>
-                <Card imgSrc="compuut-logo.png">
-                    <h3>Compuut</h3>
-                    <p>
-                        Compuut is a higher-level learning platform that I started developing towards the
-                        end of high school, and its development is still ongoing&mdash;it's a work in progress!
-                        For this app, I programmed both the front- and back-end in TypeScript, using Webpack and
-                        React for the front-end and Firebase (mostly Firestore and Functions) for the backend.
-                        Using these technologies, I was able to make Compuut a realtime learning platform similar
-                        to Kahoot.
-                    </p>
-                </Card>
-                <Card imgSrc="crt-logo.png">
-                    <h3>Rockets</h3>
-                    <p>
-                        At Case Western Reserve University, I've been working on flight computers for our
-                        rockets in embedded Rust and C++. I'm still a newbie on the team, but I've been learning
-                        a lot and am about to earn my L1 certification.
-                    </p>
-                </Card>
-            </Staggered>
-            <br />
-            <h2>My Languages</h2>
-            <ul>
-                <li>
-                    TypeScript/JavaScript ⭐⭐⭐⭐⭐
-                </li>
-                <li>
-                    Java ⭐⭐⭐⭐⭐
-                </li>
-                <li>
-                    Rust ⭐⭐⭐⭐
-                </li>
-                <li>
-                    Lua ⭐⭐⭐⭐
-                </li>
-                <li>
-                    Python ⭐⭐⭐
-                </li>
-                <li>
-                    C/C++ ⭐⭐⭐
-                </li>
-            </ul>
-            <div style={{
-                height: "30vh"
-            }}>
-                {/* Spacing!! */}
+                <div style={{
+                    backgroundImage: "url(./dots.svg)",
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    top: 5,
+                    left: 5,
+                    borderRadius: 5,
+                    zIndex: -1
+                }}></div>
             </div>
+            <div style={{
+                gridColumn: "1 / span 2",
+                gridRow: "2 / span 2"
+            }}>
+                <br />
+                <h2>Projects & Experience</h2>
+                <Staggered>
+                    <Card imgSrc="wolfbyte-logo.jpg">
+                        <h3>Robots! (FRC)</h3>
+                        <ul>
+                            <li>
+                                4 years total Java
+                            </li>
+                            <li>
+                                3 years Coding Captain
+                            </li>
+                            <li>
+                                Tough competition with a strict deadline
+                            </li>
+                            <li>
+                                Autonomous robot 🤖 control using a PID in Java
+                            </li>
+                        </ul>
+                    </Card>
+                    <Card imgSrc="compuut-logo.png">
+                        <h3>Compuut</h3>
+                        <ul>
+                            <li>
+                                A WIP platform I created for learning higher-level math
+                            </li>
+                            <li>
+                                Realtime progressive web app (PWA)
+                            </li>
+                            <li>
+                                Uses Typescript, Firebase (GCP), and React
+                            </li>
+                        </ul>
+                    </Card>
+                    <Card imgSrc="crt-logo.png">
+                        <h3>Rockets</h3>
+                        <ul>
+                            <li>
+                                Just joined this year
+                            </li>
+                            <li>
+                                Have built and launch one rocket so far, will launch more soon
+                            </li>
+                            <li>
+                                Worked on embedded software, some in Rust and some in C++
+                            </li>
+                        </ul>
+                    </Card>
+                </Staggered>
+            </div>
+        </div>
+        <div style={{
+            height: "30vh"
+        }}>
+            {/* Spacing!! */}
         </div>
     </div>
 }
