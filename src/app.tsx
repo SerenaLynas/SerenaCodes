@@ -11,7 +11,7 @@ import { MyInfo } from "./my-info"
 export const App = () => {
     return <main>
         <Sequence>
-            <SequenceItem duration={/*3_300*/ 0} key={0}>
+            <SequenceItem duration={3_300} key={0}>
                 <div style={{
                     animation: "3.3s ease-out 0s titleSlideIn",
                     paddingBottom: 20
