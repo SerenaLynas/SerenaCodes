@@ -86,41 +86,26 @@ export const MyInfo = () => {
             </Staggered>
             <br />
             <h2>My Languages</h2>
-            <Staggered>
-                <Card imgSrc="ts-logo-256.png">
-                    <h3>TypeScript/JavaScript</h3>
-                    <p>
-                        My favorite language! I have lots of experience using TypeScript to build
-                        both front-end web apps and back-end NodeJS applications.
-                    </p>
-                </Card>
-                <Card imgSrc="java-logo.png">
-                    <h3>Java</h3>
-                    <p>
-                        Although it's not my favorite language, I also have lots of experience
-                        with Java, from writing plugins for Minecraft servers to programming
-                        robots.
-                    </p>
-                </Card>
-                <Card imgSrc="rust-logo.png">
-                    <h3>Rust (embedded)</h3>
-                    <p>
-                        On Case Rocket Team, I've used Rust as an embedded language, and I'm
-                        comfortable in saying that I'm proficient in many aspects of the language.
-                        Using the Cortex M7 processor and the iMXRT1062 chip HALs, I've written
-                        applications on bare metal in Rust.
-                    </p>
-                </Card>
-                <Card imgSrc="lua-logo.png">
-                    <h3>Lua, Python, and other languages</h3>
-                    <p>
-                        I also have some experience with other languages, including Lua, Python,
-                        and C/C++ from working on other miscellaneous projects.
-                        I'm a fast learner, so if you need me to pick up a language
-                        for your project I can!
-                    </p>
-                </Card>
-            </Staggered>
+            <ul>
+                <li>
+                    TypeScript/JavaScript ⭐⭐⭐⭐⭐
+                </li>
+                <li>
+                    Java ⭐⭐⭐⭐⭐
+                </li>
+                <li>
+                    Rust ⭐⭐⭐⭐
+                </li>
+                <li>
+                    Lua ⭐⭐⭐⭐
+                </li>
+                <li>
+                    Python ⭐⭐⭐
+                </li>
+                <li>
+                    C/C++ ⭐⭐⭐
+                </li>
+            </ul>
             <div style={{
                 height: "30vh"
             }}>
