@@ -34291,7 +34291,9 @@ const react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules
 const sequence_item_context_1 = __webpack_require__(/*! ./sequence-item-context */ "./src/sequence/sequence-item-context.tsx");
 exports.SequenceHidden = (props) => {
     const { hasPassed } = sequence_item_context_1.useSequenceInfo();
-    return hasPassed ? react_1.default.createElement(react_1.default.Fragment, null, props.children) : null;
+    return hasPassed
+        ? react_1.default.createElement(react_1.default.Fragment, null, props.children)
+        : react_1.default.createElement("div", { style: { display: "none" } }, props.children); // Search engines
 };
 
 
