@@ -1,52 +1,49 @@
-import React, { PropsWithChildren } from "react"
+import React from "react"
+import { theme } from "./theme"
 
-interface Props {
-    imgSrc?: string
-    imgEmoji?: string
+interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    icon?: string | React.ReactElement,
+    header?: React.ReactElement
 }
 
-export const Card = (props: PropsWithChildren<Props>) => {
-    return <div style={{
-        display: "flex",
-        borderRadius: 5,
-        position: "relative",
-        //backgroundColor: "rgb(252 242 242)",
-        textAlign: "justify",
-        padding: 5
-    }}>
-        { props.imgSrc ? <img src={props.imgSrc} style={{
-            height: "3rem",
-            aspectRatio: "1 / 1",
-            margin: 5,
-            borderRadius: 5
-        }}/> : (
-            props.imgEmoji ? <div style={{
-                height: "3rem",
-                width: "3rem",
-                margin: 5,
-                borderRadius: 5,
-                fontSize: "2rem",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-            }}>{ props.imgEmoji }</div> : <></>
-        ) }
-        <div style={{
-            padding: 0
-        }}>
-            { props.children }
-        </div>
-        {/*<div style={{
-            backgroundImage: "url(./dots.svg)",
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            top: 5,
-            left: 5,
-            borderRadius: 5,
-            zIndex: -1
-        }}>*/}
+export const Card = ({ children, icon, header, ...props }: Props) => {
+    let iconEl;
 
-        {/*</div>*/}
+    if (typeof icon === 'string') {
+        iconEl = <img src={icon} style={{
+            objectFit: 'contain',
+            width: 30,
+            height: 30,
+        }}/>
+    } else if (icon) {
+        iconEl = icon
+    } else {
+        iconEl = null;
+    }
+
+    return <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        borderRadius: 5,
+        boxShadow: '0 2px 20px -15px ' + theme.shadow,
+        ...props.style
+    }}>
+        <div {...props} style={{
+            display: "flex",
+            background: 'white',
+            padding: 10,
+            alignItems: 'center',
+            gap: 10,
+            borderBottom: '1px solid ' + theme.shadow + '1f',
+        }}>
+            {iconEl}
+            {header || null}
+        </div>
+        <div style={{
+            padding: 15,
+            paddingLeft: 20,
+        }}>
+            { children }
+        </div>
     </div>
 }

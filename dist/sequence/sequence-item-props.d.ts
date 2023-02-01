@@ -6,6 +6,6 @@ interface _SequenceItemProps {
      */
     duration: number;
 }
-export declare type SequenceItemProps = PropsWithChildren<_SequenceItemProps>;
+export type SequenceItemProps = PropsWithChildren<_SequenceItemProps>;
 export {};
 //# sourceMappingURL=sequence-item-props.d.ts.map

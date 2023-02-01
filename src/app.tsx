@@ -11,10 +11,11 @@ import { MyInfo } from "./my-info"
 export const App = () => {
     return <main>
         <Sequence>
-            <SequenceItem duration={3_300} key={0}>
+            <SequenceItem duration={0 * 3_300} key={0}>
                 <div style={{
                     animation: "3.3s ease-out 0s titleSlideIn",
-                    paddingBottom: 20
+                    paddingTop: 20,
+                    paddingBottom: 40,
                 }}>
                     <PopText>Hi!<Wait delay={500}/> I'm Serena Lynas!</PopText>
                 </div>

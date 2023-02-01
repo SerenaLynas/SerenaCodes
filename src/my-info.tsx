@@ -1,10 +1,20 @@
+import { mdiEmail, mdiGithub, mdiLanguageTypescript, mdiLinkVariant } from "@mdi/js"
 import React from "react"
-import { Card } from "./card"
+import { OldCard } from "./old-card"
+import { CardColumn } from "./card-column"
+import { ClickableCard } from "./clickable-card"
+import { Icon } from "./icon"
+import { LanguageCard } from "./language-card"
+import { SmallCard } from "./small-card"
 import { Staggered } from "./staggered"
+import { theme } from "./theme"
+import { Card } from "./card"
+import { projectsData } from "./projects-data"
+import { ProjectCard } from "./project-card"
 
 export const MyInfo = () => {
     return <div style={{
-        overflow: "hidden",
+        overflow: "visible",
         maxWidth: 800,
         animation: "1s flyIn ease-out",
     }}>
@@ -25,56 +35,72 @@ export const MyInfo = () => {
                 }}>
                     I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring
                     in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math,
-                    physics and computer science, so I decided to major in all three! I've been coding for
-                    more than 5 years in a variety of languages with a variety of projects.
+                    physics and computer science, so I decided to major in all three! I've been coding since
+                    I was 10 years old, and along the way I picked up a variety of languages, from HTML/CSS/JS
+                    to embedded C++.
                 </p>
                 <br />
                 <h2>My Languages</h2>
                 <br />
-                <ul>
-                    <li>
-                        5/5 🤩: TypeScript/JavaScript (Browser & NodeJS)
-                    </li>
-                    <li>
-                        5/5 🤩: Java
-                    </li>
-                    <li>
-                        4/5 🥰: Rust 
-                    </li>
-                    <li>
-                        4/5 🥰: Lua
-                    </li>
-                    <li>
-                        3/5 🙂: Python
-                    </li>
-                    <li>
-                        3/5 🙂: C/C++
-                    </li>
-                </ul>
+                <CardColumn>
+                    <LanguageCard
+                        lang='typescript'
+                        icon='logos/ts.png'
+                        header='TypeScript/JavaScript'/>
+                    <LanguageCard
+                        lang='java'
+                        icon='logos/java.png'
+                        header='Java'/>
+                    <LanguageCard
+                        lang='rust'
+                        icon='logos/rust.png'
+                        header='Rust'/>
+                    <LanguageCard
+                        lang='cpp'
+                        icon='logos/cpp.png'
+                        header='C/C++'/>
+                </CardColumn>
             </div>
             <div style={{
                 gridColumn: "2",
                 gridRow: "1 / 3",
                 gridAutoColumns: "auto",
-                background: "rgb(252 242 242)",
-                padding: "25px",
-                margin: 5,
+                //background: "rgb(252 242 242)",
+                background: "white",
+                paddingLeft: "25px",
+                marginLeft: 30,
                 borderRadius: 5,
                 position: "relative",
-                alignSelf: "self-start"
+                alignSelf: "self-start",
+                boxShadow: theme.shadow + " -15px 0px 20px -30px"
             }}>
                 <h2>
                     Connect
                 </h2>
-                <p>
-                    Website: <a href="https://serena.codes">serena.codes</a>
-                    <br />
-                    Email: <a href="mailto://serena@serena.codes">serena@serena.codes</a>
-                    <br />
-                    GitHub: SploxFox &mdash; <a href="https://github.com/SploxFox">Check it out! (https://github.com/SploxFox)</a>
-                </p>
+                <br/>
+                <CardColumn>
+                    <ClickableCard 
+                            icon={<Icon mdi={mdiLinkVariant} title="Website Link"/>}
+                            href="https://serena.codes">
+                        serena.codes
+                    </ClickableCard>
+                    
+                    <ClickableCard
+                            icon={<Icon mdi={mdiEmail} title="Email Address"/>}
+                            href="mailto://serena@serena.codes">
+                        serena@serena.codes
+                    </ClickableCard>
+
+                    <ClickableCard 
+                            icon={<Icon mdi={mdiGithub} title="GitHub"/>}
+                            href="https://github.com/SploxFox">
+                            {/*<a href="https://github.com/SploxFox">SploxFox</a>*/}
+                        SploxFox
+                    </ClickableCard>
+                </CardColumn>
                 <br/>
                 <h2>Timeline</h2>
+                <br/>
                 <h3>2022-Present</h3>
                 <ul>
                     <li>
@@ -85,6 +111,7 @@ export const MyInfo = () => {
                         Rocket team
                     </li>
                 </ul>
+                <br/>
                 <h3>2018-2022</h3>
                 <ul>
                     <li>
@@ -94,7 +121,7 @@ export const MyInfo = () => {
                         <em>2019-2022</em>: Coding Captain on our school's robotics team.
                     </li>
                 </ul>
-                <div style={{
+                {/*<div style={{
                     backgroundImage: "url(./dots.svg)",
                     position: "absolute",
                     width: "100%",
@@ -103,7 +130,7 @@ export const MyInfo = () => {
                     left: 5,
                     borderRadius: 5,
                     zIndex: -1
-                }}></div>
+                }}></div>*/}
             </div>
             <div style={{
                 gridColumn: "1 / span 2",
@@ -111,8 +138,36 @@ export const MyInfo = () => {
             }}>
                 <br />
                 <h2>Projects & Experience</h2>
+                <Card icon='logos/wolfbyte.jpg' header={<h3>FRC Robots</h3>}>
+                    <ul>
+                        <li>
+                            4 years total Java
+                        </li>
+                        <li>
+                            3 years Coding Captain
+                        </li>
+                        <li>
+                            Tough competition with a strict deadline
+                        </li>
+                        <li>
+                            Autonomous robot 🤖 control using a PID in Java
+                        </li>
+                    </ul>
+                </Card>
+
+                <br/>
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 10,
+                        maxWidth: 700,
+                        margin: 'auto'
+                    }}>
+                        { Object.entries(projectsData).map(([key, data]) => <ProjectCard key={key} projectData={data} />) }
+                    </div>
+                
                 <Staggered>
-                    <Card imgSrc="wolfbyte-logo.jpg">
+                    <OldCard imgSrc="wolfbyte-logo.jpg">
                         <h3>Robots! (FRC)</h3>
                         <ul>
                             <li>
@@ -128,8 +183,8 @@ export const MyInfo = () => {
                                 Autonomous robot 🤖 control using a PID in Java
                             </li>
                         </ul>
-                    </Card>
-                    <Card imgSrc="compuut-logo.png">
+                    </OldCard>
+                    <OldCard imgSrc="compuut-logo.png">
                         <h3>Compuut</h3>
                         <ul>
                             <li>
@@ -142,8 +197,8 @@ export const MyInfo = () => {
                                 Uses Typescript, Firebase (GCP), and React
                             </li>
                         </ul>
-                    </Card>
-                    <Card imgSrc="crt-logo.png">
+                    </OldCard>
+                    <OldCard imgSrc="crt-logo.png">
                         <h3>Rockets</h3>
                         <ul>
                             <li>
@@ -156,8 +211,8 @@ export const MyInfo = () => {
                                 Worked on embedded software, some in Rust and some in C++
                             </li>
                         </ul>
-                    </Card>
-                    <Card imgEmoji="📝">
+                    </OldCard>
+                    <OldCard imgEmoji="📝">
                         <h3>Math & Physics</h3>
                         <ul>
                             <li>
@@ -167,7 +222,7 @@ export const MyInfo = () => {
                                 Physics: Mechanics & E&M. No quantum (yet)
                             </li>
                         </ul>
-                    </Card>
+                    </OldCard>
                 </Staggered>
             </div>
         </div>

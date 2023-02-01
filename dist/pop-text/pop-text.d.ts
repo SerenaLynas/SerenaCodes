@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { Wait } from "../sequence/wait";
 interface Props {
     children: string | (string | Wait)[];
