@@ -21,7 +21,11 @@ h2 {
     text-transform: uppercase;
 }
 
-h3, p {
+h3 {
+    margin: 0;
+}
+
+p {
     margin: 0.5rem;
 }
 
@@ -83,6 +87,26 @@ main {
     100% {
         opacity: 1;
         transform: translate(0, 0);
+    }
+}
+
+@keyframes bounceRight {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50%, 0);
+    }
+}
+
+@keyframes smallBounce {
+    0%, 100% {
+        transform: scale(1)
+    }
+
+    20% {
+        transform: scale(0.9)
     }
 }
 

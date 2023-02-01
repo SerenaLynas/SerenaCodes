@@ -1,8 +1,8 @@
-import { PropsWithChildren } from "react";
-interface Props {
-    imgSrc?: string;
-    imgEmoji?: string;
+import React from "react";
+interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    icon?: string | React.ReactElement;
+    header?: React.ReactElement;
 }
-export declare const Card: (props: PropsWithChildren<Props>) => JSX.Element;
+export declare const Card: ({ children, icon, header, ...props }: Props) => JSX.Element;
 export {};
 //# sourceMappingURL=card.d.ts.map
