@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { DivProps } from "./div-props";
 import { ProjectData } from "./projects-data";
 interface Props extends DivProps {
