@@ -59,6 +59,7 @@ export declare const projectsData: {
     compuut: {
         friendlyName: string;
         imgLink: string;
+        description: JSX.Element;
         link: string;
         lang: {
             javascript: true;
@@ -69,9 +70,22 @@ export declare const projectsData: {
             firebase: true;
         };
     };
+    crt: {
+        friendlyName: string;
+        imgLink: string;
+        description: JSX.Element;
+        lang: {
+            cpp: true;
+        };
+        tech: {
+            arduino: true;
+        };
+        ghLink: string;
+    };
     serenaCodes: {
         friendlyName: string;
         imgLink: string;
+        description: JSX.Element;
         link: string;
         ghLink: string;
         lang: {
@@ -85,6 +99,7 @@ export declare const projectsData: {
     wolfbyte: {
         friendlyName: string;
         imgLink: string;
+        description: JSX.Element;
         lang: {
             java: true;
         };
@@ -92,17 +107,7 @@ export declare const projectsData: {
             robotics: true;
         };
         time: string;
-    };
-    crt: {
-        friendlyName: string;
-        imgLink: string;
-        description: JSX.Element;
-        lang: {
-            cpp: true;
-        };
-        tech: {
-            arduino: true;
-        };
+        ghLink: string;
     };
 };
 export {};
