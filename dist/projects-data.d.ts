@@ -86,7 +86,6 @@ export declare const projectsData: {
         friendlyName: string;
         imgLink: string;
         description: JSX.Element;
-        link: string;
         ghLink: string;
         lang: {
             javascript: true;

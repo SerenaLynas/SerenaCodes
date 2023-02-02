@@ -149,7 +149,7 @@ export const MyInfo = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     gap: 10,
-                    maxWidth: 500,
+                    maxWidth: 800,
                     margin: 'auto'
                 }}>
                     { Object.entries(projectsData).map(([key, data]) => <ProjectCard key={key} projectData={data} />) }

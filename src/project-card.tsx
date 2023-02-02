@@ -8,6 +8,7 @@ import { OldCard } from "./generic/old-card"
 import { ProjectData, projectLanguages, projectTechs } from "./projects-data"
 import { theme } from "./theme"
 import { ClickableCard } from "./generic/clickable-card"
+import useWindowSize from "./util/use-window-size"
 
 interface Props extends DivProps {
     projectData: ProjectData
@@ -33,12 +34,14 @@ const ProjectLine = (props: ProjectLineProps) =>
 
 export const ProjectCard = ({ projectData, ...props }: Props) => {
     const { time, tech, lang, description, ghLink, link } = projectData;
+    const isMobile = useWindowSize()[0] < 1000
     return <Card
             {...props}
             icon={projectData.imgLink}
             header={<h3>{ projectData.friendlyName }</h3>}>
         <div style={{
-            display: 'flex',
+            display: isMobile ? 'flex' : 'grid',
+            gridTemplateColumns: '0.75fr 0.25fr',
             flexDirection: 'column',
             gap: 15,
             color: theme.softText,
@@ -58,13 +61,20 @@ export const ProjectCard = ({ projectData, ...props }: Props) => {
                 { link ? <ClickableCard icon={<Icon mdi={mdiOpenInNew}/>} href={link}>Visit</ClickableCard> : null }
                 { ghLink ? <ClickableCard icon={<Icon mdi={mdiGithub}/>} href={ghLink}>View Source</ClickableCard> : null }
             </div>
-            <ProjectLine mdi={mdiClockOutline} content={time} />
-            <ProjectLine mdi={mdiCodeBraces} content={
-                Object.keys(lang).map(l => (projectLanguages as any)[l].friendlyName).join(', ')
-            }/>
-            <ProjectLine mdi={mdiTools} content={
-                Object.keys(tech).map(l => (projectTechs as any)[l].friendlyName).join(', ')
-            }/>
+            <div style={{
+                gridArea: '1 / 2 / span 1 / auto',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 15,
+            }}>
+                <ProjectLine mdi={mdiClockOutline} content={time} />
+                <ProjectLine mdi={mdiCodeBraces} content={
+                    Object.keys(lang).map(l => (projectLanguages as any)[l].friendlyName).join(', ')
+                }/>
+                <ProjectLine mdi={mdiTools} content={
+                    Object.keys(tech).map(l => (projectTechs as any)[l].friendlyName).join(', ')
+                }/>
+            </div>
         </div>
     </Card>
 }
