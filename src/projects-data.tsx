@@ -155,7 +155,6 @@ export const projectsData = {
                 source on GitHub!
             </p>
         </>,
-        link: 'https://serena.codes',
         ghLink: 'https://github.com/SploxFox/SerenaCodes',
         lang: {
             javascript,
