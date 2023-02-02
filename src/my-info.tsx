@@ -36,9 +36,8 @@ export const MyInfo = () => {
                 gridRow: "1"
             }}>
                 <h2>Who am I?</h2>
-                <p style={{
-                    textAlign: "justify"
-                }}>
+                <br/>
+                <p>
                     I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring
                     in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math,
                     physics and computer science, so I decided to major in all three! I've been coding since
