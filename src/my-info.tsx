@@ -1,25 +1,31 @@
 import { mdiEmail, mdiGithub, mdiLanguageTypescript, mdiLinkVariant } from "@mdi/js"
 import React from "react"
-import { OldCard } from "./old-card"
-import { CardColumn } from "./card-column"
-import { ClickableCard } from "./clickable-card"
-import { Icon } from "./icon"
+import { OldCard } from "./generic/old-card"
+import { CardColumn } from "./generic/card-column"
+import { ClickableCard } from "./generic/clickable-card"
+import { Icon } from "./generic/icon"
 import { LanguageCard } from "./language-card"
-import { SmallCard } from "./small-card"
-import { Staggered } from "./staggered"
+import { SmallCard } from "./generic/small-card"
+import { Staggered } from "./generic/staggered"
 import { theme } from "./theme"
-import { Card } from "./card"
+import { Card } from "./generic/card"
 import { projectsData } from "./projects-data"
 import { ProjectCard } from "./project-card"
+import useWindowSize from "./util/use-window-size"
 
 export const MyInfo = () => {
+    const [windowWidth, windowHeight] = useWindowSize();
+    const isMobile = windowWidth < 650;
+
     return <div style={{
         overflow: "visible",
         maxWidth: 800,
         animation: "1s flyIn ease-out",
     }}>
         <div style={{
-            display: "grid",
+            display: isMobile ? 'flex' : 'grid',
+            padding: isMobile ? 10 : 'unset',
+            flexDirection: 'column',
             gridTemplateColumns: "repeat(2, 1fr)",
             //gridTemplateRows: "repeat(3, 1fr)",
             gap: 10,
@@ -61,7 +67,8 @@ export const MyInfo = () => {
                         header='C/C++'/>
                 </CardColumn>
             </div>
-            <div style={{
+            { isMobile ? <br /> : '' }
+            <div style={isMobile ? {} : {
                 gridColumn: "2",
                 gridRow: "1 / 3",
                 gridAutoColumns: "auto",
@@ -138,92 +145,16 @@ export const MyInfo = () => {
             }}>
                 <br />
                 <h2>Projects & Experience</h2>
-                <Card icon='logos/wolfbyte.jpg' header={<h3>FRC Robots</h3>}>
-                    <ul>
-                        <li>
-                            4 years total Java
-                        </li>
-                        <li>
-                            3 years Coding Captain
-                        </li>
-                        <li>
-                            Tough competition with a strict deadline
-                        </li>
-                        <li>
-                            Autonomous robot 🤖 control using a PID in Java
-                        </li>
-                    </ul>
-                </Card>
-
                 <br/>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: 10,
-                        maxWidth: 700,
-                        margin: 'auto'
-                    }}>
-                        { Object.entries(projectsData).map(([key, data]) => <ProjectCard key={key} projectData={data} />) }
-                    </div>
-                
-                <Staggered>
-                    <OldCard imgSrc="wolfbyte-logo.jpg">
-                        <h3>Robots! (FRC)</h3>
-                        <ul>
-                            <li>
-                                4 years total Java
-                            </li>
-                            <li>
-                                3 years Coding Captain
-                            </li>
-                            <li>
-                                Tough competition with a strict deadline
-                            </li>
-                            <li>
-                                Autonomous robot 🤖 control using a PID in Java
-                            </li>
-                        </ul>
-                    </OldCard>
-                    <OldCard imgSrc="compuut-logo.png">
-                        <h3>Compuut</h3>
-                        <ul>
-                            <li>
-                                A WIP platform I created for learning higher-level math
-                            </li>
-                            <li>
-                                Realtime progressive web app (PWA)
-                            </li>
-                            <li>
-                                Uses Typescript, Firebase (GCP), and React
-                            </li>
-                        </ul>
-                    </OldCard>
-                    <OldCard imgSrc="crt-logo.png">
-                        <h3>Rockets</h3>
-                        <ul>
-                            <li>
-                                Just joined this year
-                            </li>
-                            <li>
-                                Have built and launch one rocket so far, will launch more soon
-                            </li>
-                            <li>
-                                Worked on embedded software, some in Rust and some in C++
-                            </li>
-                        </ul>
-                    </OldCard>
-                    <OldCard imgEmoji="📝">
-                        <h3>Math & Physics</h3>
-                        <ul>
-                            <li>
-                                Math: Multivariable calculus. Will take Diff Eq Spring 2023
-                            </li>
-                            <li>
-                                Physics: Mechanics & E&M. No quantum (yet)
-                            </li>
-                        </ul>
-                    </OldCard>
-                </Staggered>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 10,
+                    maxWidth: 500,
+                    margin: 'auto'
+                }}>
+                    { Object.entries(projectsData).map(([key, data]) => <ProjectCard key={key} projectData={data} />) }
+                </div>
             </div>
         </div>
         <div className="noPrint" style={{

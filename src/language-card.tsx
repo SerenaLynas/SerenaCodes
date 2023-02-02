@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ForwardArrow } from "./forward-arrow";
 import { ProjectKeyword } from "./projects-data";
-import { SmallCard } from "./small-card";
+import { SmallCard } from "./generic/small-card";
 import { theme } from "./theme";
 
 interface Props {

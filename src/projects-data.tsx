@@ -84,6 +84,25 @@ export const projectsData = {
     compuut: {
         friendlyName: 'Compuut',
         imgLink: 'logos/compuut.png',
+        description: <>
+            <p>
+                One day in highschool I was sitting in class and the teacher tried to do a Kahoot in math
+                class. Suffice it to say, it went horribly &mdash; Kahoot had no math symbols and was only
+                multiple choice! That's when I got the idea to make a fully-fledged web app learning tool.
+            </p>
+            <p>
+                I bought compuut.com (as that was the domain I could get for cheap at the time) and after
+                many, many hours of work and testing it out in class, I had a minimum viable product. It's a
+                full-stack, real-time web app like Kahoot with full support for LaTeX, programmed entirely
+                by me. I continued to iterate over it over the course of the year, and by the end of it I
+                had produced a web app which had user authentication, databases, a support email, and a
+                primitive monetization scheme.
+            </p>
+            <p>
+                I'm hoping that now in college, I can find professors and other early adopters who can help
+                me work on Compuut and turn it into a fully-fledged platform.
+            </p>
+        </>,
         link: 'https://compuut.com',
         lang: {
             javascript,
@@ -94,9 +113,48 @@ export const projectsData = {
             firebase
         }
     },
+    crt: {
+        friendlyName: 'Case Rocket Team',
+        imgLink: 'logos/crt.png',
+        description: <>
+            <p>
+                I wrote code that made rockets fly! Currently, I'm our team's lead developer on our flight computer
+                code, written for an embedded system in C++.
+            </p>
+            <p>
+                When I first joined Case Rocket Team, I didn't know much of anything about C++ or embedded systems,
+                but I quickly was able to transfer the knowledge I had from other areas of computer science into
+                embedded C++. Paired with a lot of trial and error, I mastered C++, and when we started working
+                on the competition code, I ended up as the lead.
+            </p>
+            <p>
+                Last year, our team placed first in our category and second overall of 149 university teams,
+                and I'm hoping that over the coming years we can refine our code and control systems to push us
+                into first.
+            </p>
+        </>,
+        lang: {
+            cpp
+        },
+        tech: {
+            arduino
+        },
+        ghLink: 'https://github.com/Case-Rocket-Team/FlightComputer2022-23'
+    },
     serenaCodes: {
         friendlyName: 'Serena.Codes (This website!)',
         imgLink: 'logos/serenacodes.png',
+        description: <>
+            <p>
+                I wanted a portfolio-slash-resume website for myself so that way people like you
+                could learn a little more about me! I used the tech stack that I'm most familiar
+                with (Typescript + Webpack + React), and I used my (limited) frontend design skils
+                to hopefully impress you with cool CSS animations.
+            </p><p>
+                If you're interested, you can get a taste of my coding style and take a look at the
+                source on GitHub!
+            </p>
+        </>,
         link: 'https://serena.codes',
         ghLink: 'https://github.com/SploxFox/SerenaCodes',
         lang: {
@@ -110,32 +168,26 @@ export const projectsData = {
     wolfbyte: {
         friendlyName: 'FRC 5822',
         imgLink: 'logos/wolfbyte.jpg',
+        description: <>
+            <p>
+                I joined WolfByte my freshman year of highschool and immediately fell in love with the club.
+                I was so enthusiastic that I would spend more than 20 hours per week in the build space during
+                the peak of the season!
+            </p><p>
+                The following year, I was promoted to software lead where I remained until I graduated. During
+                that time, I had a lot of fun doing robotics competitions, solving difficult problems, and managing
+                our codebase. Our software included both desktop apps for Robot communication and
+                robot code like PID control systems and odometry.
+            </p>
+        </>,
         lang: {
             java,
         },
         tech: {
             robotics
         },
-        time: '4 years, 3 years Coding Captain; 20 hours/week'
-    },
-    crt: {
-        friendlyName: 'Case Rocket Team',
-        imgLink: 'logos/crt.png',
-        description: <>
-            I wrote code that made rockets fly! Currently, I'm our team's lead developer on our flight computer
-            code, written for an embedded system in C++. When I first joined Case Rocket Team, I didn't know
-            much of anything about C++ or embedded systems, but I quickly was able to transfer the knowledge
-            I had from other areas of computer science into embedded C++. Paired with a lot of trial and error,
-            I mastered C++, and when we started working on the competition code, I ended up as the lead.
-            Last competition, our team placed first in our category and second overall of 149 university teams,
-            and I'm hoping that this year we can refine 
-        </>,
-        lang: {
-            cpp
-        },
-        tech: {
-            arduino
-        }
+        time: '20 hours/week for 4 years',
+        ghLink: 'https://github.com/SICPRobotics/GameChangers-Robot',
     }
 } satisfies {
     [index: string]: ProjectData
