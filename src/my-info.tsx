@@ -14,7 +14,7 @@ import { ProjectCard } from "./project-card"
 import useWindowSize from "./util/use-window-size"
 
 export const MyInfo = () => {
-    const [windowWidth, windowHeight] = useWindowSize();
+    const [windowWidth] = useWindowSize();
     const isMobile = windowWidth < 650;
 
     return <div style={{
@@ -27,7 +27,6 @@ export const MyInfo = () => {
             padding: isMobile ? 10 : 'unset',
             flexDirection: 'column',
             gridTemplateColumns: "repeat(2, 1fr)",
-            //gridTemplateRows: "repeat(3, 1fr)",
             gap: 10,
             
         }}>
@@ -71,7 +70,6 @@ export const MyInfo = () => {
                 gridColumn: "2",
                 gridRow: "1 / 3",
                 gridAutoColumns: "auto",
-                //background: "rgb(252 242 242)",
                 background: "white",
                 paddingLeft: "25px",
                 marginLeft: 30,
@@ -123,20 +121,7 @@ export const MyInfo = () => {
                     <li>
                         Student at St. Ignatius College Prep in Chicago, IL.
                     </li>
-                    <li>
-                        <em>2019-2022</em>: Coding Captain on our school's robotics team.
-                    </li>
                 </ul>
-                {/*<div style={{
-                    backgroundImage: "url(./dots.svg)",
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    top: 5,
-                    left: 5,
-                    borderRadius: 5,
-                    zIndex: -1
-                }}></div>*/}
             </div>
             <div style={{
                 gridColumn: "1 / span 2",

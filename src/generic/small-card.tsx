@@ -35,10 +35,10 @@ export const SmallCard = ({ icon, onHoverChange, ...props }: SmallCardProps) => 
         {...props} 
         style={{
             display: "flex",
-            background: 'white',//theme.lightBlue,
+            background: 'white',
             padding: '10px 15px 10px 10px',
             borderRadius: 5,
-            boxShadow: '0 2px 20px -15px ' + theme.shadow, //'0 7px 15px -10px #ffdbff',
+            boxShadow: '0 2px 20px -15px ' + theme.shadow,
             alignItems: 'center',
             gap: 10,
             ...props.style
