@@ -41,7 +41,7 @@ export const MyInfo = () => {
                     in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math,
                     physics and computer science, so I decided to major in all three! I've been coding since
                     I was 10 years old, and along the way I picked up a variety of languages, from HTML/CSS/JS
-                    to embedded C++.
+                    to embedded Rust.
                 </p>
                 <br />
                 <h2>My Languages</h2>
@@ -59,10 +59,6 @@ export const MyInfo = () => {
                         lang='rust'
                         icon='logos/rust.png'
                         header='Rust'/>
-                    <LanguageCard
-                        lang='cpp'
-                        icon='logos/cpp.png'
-                        header='C/C++'/>
                 </CardColumn>
             </div>
             { isMobile ? <br /> : '' }
@@ -97,9 +93,9 @@ export const MyInfo = () => {
 
                     <ClickableCard 
                             icon={<Icon mdi={mdiGithub} title="GitHub"/>}
-                            href="https://github.com/SploxFox">
+                            href="https://github.com/SerenaLynas">
                             {/*<a href="https://github.com/SploxFox">SploxFox</a>*/}
-                        SploxFox
+                        SerenaLynas
                     </ClickableCard>
                 </CardColumn>
                 <br/>
