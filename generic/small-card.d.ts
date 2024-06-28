@@ -5,6 +5,6 @@ interface Props extends DivProps {
     onHoverChange?: (isHovering: boolean) => void;
 }
 export type SmallCardProps = PropsWithChildren<Props>;
-export declare const SmallCard: ({ icon, onHoverChange, ...props }: SmallCardProps) => JSX.Element;
+export declare const SmallCard: ({ icon, onHoverChange, ...props }: SmallCardProps) => React.JSX.Element;
 export {};
 //# sourceMappingURL=small-card.d.ts.map

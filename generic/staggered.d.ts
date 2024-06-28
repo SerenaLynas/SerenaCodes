@@ -1,8 +1,8 @@
-import { CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 import { PropsWithChildren } from "react";
 interface Props {
     style?: CSSProperties;
 }
-export declare const Staggered: (props: PropsWithChildren<Props>) => JSX.Element;
+export declare const Staggered: (props: PropsWithChildren<Props>) => React.JSX.Element;
 export {};
 //# sourceMappingURL=staggered.d.ts.map
