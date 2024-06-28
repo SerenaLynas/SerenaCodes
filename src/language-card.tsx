@@ -18,7 +18,7 @@ export const LanguageCard = (props: Props) => {
                 position: 'relative',
                 overflow: 'hidden',
             }}>
-        <strong >{props.header}</strong>
+        <strong>{props.header}</strong>
         { props.byline ? <i>{props.byline}</i> : null}
     </SmallCard>   
 }

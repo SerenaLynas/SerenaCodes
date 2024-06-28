@@ -20,7 +20,7 @@ export const PopText = (props: Props) => {
         <Sequence>
             { children.map((el, i) =>
                     typeof el == "string" 
-                            ? <SequenceItem duration={80} key={i}>
+                            ? <SequenceItem duration={40} key={i}>
                                 <PopTextChar char={el}/>
                             </SequenceItem>
                             : <SequenceItem duration={el.props.delay} />) }

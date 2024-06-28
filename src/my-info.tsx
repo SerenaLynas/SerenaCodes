@@ -1,14 +1,10 @@
 import { mdiEmail, mdiGithub, mdiLanguageTypescript, mdiLinkVariant } from "@mdi/js"
 import React from "react"
-import { OldCard } from "./generic/old-card"
 import { CardColumn } from "./generic/card-column"
 import { ClickableCard } from "./generic/clickable-card"
 import { Icon } from "./generic/icon"
 import { LanguageCard } from "./language-card"
-import { SmallCard } from "./generic/small-card"
-import { Staggered } from "./generic/staggered"
 import { theme } from "./theme"
-import { Card } from "./generic/card"
 import { projectsData } from "./projects-data"
 import { ProjectCard } from "./project-card"
 import useWindowSize from "./util/use-window-size"
@@ -20,7 +16,7 @@ export const MyInfo = () => {
     return <div style={{
         overflow: "visible",
         maxWidth: 800,
-        animation: "1s flyIn ease-out",
+        animation: "0.5s flyIn ease-out",
     }}>
         <div style={{
             display: isMobile ? 'flex' : 'grid',
@@ -35,7 +31,6 @@ export const MyInfo = () => {
                 gridRow: "1"
             }}>
                 <h2>Who am I?</h2>
-                <br/>
                 <p>
                     I'm Serena Lynas, an undergrad at Case Western Reserve University, and I'm double majoring
                     in Physics and Mathematics, BS, and Computer Science, BS. I couldn't decide between math,
@@ -43,22 +38,24 @@ export const MyInfo = () => {
                     I was 10 years old, and along the way I picked up a variety of languages, from HTML/CSS/JS
                     to embedded Rust.
                 </p>
-                <br />
-                <h2>My Languages</h2>
-                <br />
+                <h2>Some Languages</h2>
                 <CardColumn>
+                    <LanguageCard
+                        lang='rust'
+                        icon='logos/rust.png'
+                        header='Rust'/>
                     <LanguageCard
                         lang='typescript'
                         icon='logos/ts.png'
                         header='TypeScript/JavaScript'/>
                     <LanguageCard
+                        lang='python'
+                        icon='logos/python.svg'
+                        header='Python'/>
+                    <LanguageCard
                         lang='java'
                         icon='logos/java.png'
                         header='Java'/>
-                    <LanguageCard
-                        lang='rust'
-                        icon='logos/rust.png'
-                        header='Rust'/>
                 </CardColumn>
             </div>
             { isMobile ? <br /> : '' }
@@ -77,7 +74,6 @@ export const MyInfo = () => {
                 <h2>
                     Connect
                 </h2>
-                <br/>
                 <CardColumn>
                     <ClickableCard 
                             icon={<Icon mdi={mdiLinkVariant} title="Website Link"/>}
@@ -98,9 +94,7 @@ export const MyInfo = () => {
                         SerenaLynas
                     </ClickableCard>
                 </CardColumn>
-                <br/>
                 <h2>Timeline</h2>
-                <br/>
                 <h3>2022-Present</h3>
                 <ul>
                     <li>
@@ -108,10 +102,9 @@ export const MyInfo = () => {
                         Computer Science.
                     </li>
                     <li>
-                        Rocket team
+                        Avionics Lead for Case Rocket Team
                     </li>
                 </ul>
-                <br/>
                 <h3>2018-2022</h3>
                 <ul>
                     <li>

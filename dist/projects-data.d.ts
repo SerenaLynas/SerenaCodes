@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
 export interface ProjectKeywordData {
     friendlyName: string;
     url?: string;
@@ -19,6 +19,9 @@ export declare const projectLanguages: {
         aliases: string[];
     };
     rust: {
+        friendlyName: string;
+    };
+    python: {
         friendlyName: string;
     };
 };
@@ -59,7 +62,7 @@ export declare const projectsData: {
     compuut: {
         friendlyName: string;
         imgLink: string;
-        description: JSX.Element;
+        description: React.JSX.Element;
         link: string;
         lang: {
             javascript: true;
@@ -73,7 +76,7 @@ export declare const projectsData: {
     crt: {
         friendlyName: string;
         imgLink: string;
-        description: JSX.Element;
+        description: React.JSX.Element;
         lang: {
             cpp: true;
         };
@@ -85,7 +88,7 @@ export declare const projectsData: {
     serenaCodes: {
         friendlyName: string;
         imgLink: string;
-        description: JSX.Element;
+        description: React.JSX.Element;
         ghLink: string;
         lang: {
             javascript: true;
@@ -98,7 +101,7 @@ export declare const projectsData: {
     wolfbyte: {
         friendlyName: string;
         imgLink: string;
-        description: JSX.Element;
+        description: React.JSX.Element;
         lang: {
             java: true;
         };

@@ -3,6 +3,6 @@ interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElem
     icon?: string | React.ReactElement;
     header?: React.ReactElement;
 }
-export declare const Card: ({ children, icon, header, ...props }: Props) => JSX.Element;
+export declare const Card: ({ children, icon, header, ...props }: Props) => React.JSX.Element;
 export {};
 //# sourceMappingURL=card.d.ts.map

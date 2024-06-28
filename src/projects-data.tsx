@@ -21,9 +21,11 @@ export const projectLanguages = {
         aliases: ['c++']
     },
     rust: {
-        friendlyName: 'rust'
+        friendlyName: 'Rust'
     },
-    
+    python: {
+        friendlyName: 'Python'
+    }
 } satisfies {
     [index: string]: ProjectKeywordData
 }

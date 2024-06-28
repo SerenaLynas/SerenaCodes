@@ -6,6 +6,6 @@ interface Props {
     byline?: string;
     icon?: string | React.ReactElement;
 }
-export declare const LanguageCard: (props: Props) => JSX.Element;
+export declare const LanguageCard: (props: Props) => React.JSX.Element;
 export {};
 //# sourceMappingURL=language-card.d.ts.map

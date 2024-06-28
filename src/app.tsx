@@ -4,18 +4,16 @@ import { Wait } from "./sequence/wait"
 import { Sequence } from "./sequence/sequence"
 import { SequenceHidden } from "./sequence/sequence-hidden"
 import { SequenceItem } from "./sequence/sequence-item"
-import { TopSlant } from "./top-slant"
-import { Header } from "./generic/header"
 import { MyInfo } from "./my-info"
 
 export const App = () => {
     return <main>
         <Sequence>
-            <SequenceItem duration={3_600} key={0}>
+            <SequenceItem duration={500} key={0}>
                 <div style={{
-                    animation: "3.3s ease-out 0s titleSlideIn",
+                    animation: "1s ease-out 0s titleSlideIn",
                     paddingTop: 20,
-                    paddingBottom: 40,
+                    paddingBottom: 10,
                 }}>
                     <PopText>Hi!<Wait delay={500}/> I'm Serena Lynas!</PopText>
                 </div>
